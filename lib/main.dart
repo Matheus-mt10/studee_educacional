@@ -1,6 +1,7 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:studee_educational/screens/forgotpassword_screen.dart';
 import 'package:studee_educational/screens/homescreen.dart';
 import 'package:studee_educational/screens/login_screen.dart';
 import 'package:studee_educational/screens/onboarding_screen.dart';
@@ -31,6 +32,9 @@ final _router = GoRouter(routes: [
   GoRoute(
     path: '/cadastroAluno',
     builder: (context, state) => const OnboardingStudent(),
+  ),
+  GoRoute(path: '/EsqueciMinhaSenha',
+  builder: (context, state) => const ForgotPassword(),
   ),
 ], initialLocation: '/');
 

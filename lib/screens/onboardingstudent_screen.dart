@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 import 'package:studee_educational/components/input.dart';
 
@@ -35,7 +36,10 @@ class _OnboardingStudentState extends State<OnboardingStudent> {
                     child: SizedBox(
                         width: 120,
                         child: FilledButton(
-                            onPressed: () {}, child: const Text('Voltar'))),
+                            onPressed: () {
+                              context.push('/OnboardingPage');
+                            },
+                            child: const Text('Voltar'))),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),

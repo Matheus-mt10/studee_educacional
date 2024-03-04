@@ -46,7 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: TextButton(
-                      onPressed: () {}, child: const Text("Esqueceu a senha?")),
+                      onPressed: () {
+                        context.push('/EsqueciMinhaSenha');
+                      },
+                      child: const Text("Esqueceu a senha?")),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32.0),
