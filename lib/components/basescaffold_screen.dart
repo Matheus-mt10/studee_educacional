@@ -5,7 +5,7 @@ class BaseScaffold extends StatefulWidget {
   final Widget body;
   final bool showAppBar;
 
-  const BaseScaffold({required this.body, this.showAppBar = true, super.key});
+  const BaseScaffold({required this.body, this.showAppBar=true ,super.key});
 
   @override
   State<BaseScaffold> createState() => _BaseScaffoldState();
@@ -16,13 +16,13 @@ class _BaseScaffoldState extends State<BaseScaffold> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
+        drawer: const DrawerHome(),
+        appBar: widget.showAppBar ? AppBar(
           title: const Text('Home'),
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.notifications))
           ],
-        ),
-        drawer: const DrawerHome(),
+        ) :null ,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
