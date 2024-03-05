@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class DrawerHome extends StatefulWidget {
   const DrawerHome({super.key});
@@ -13,8 +14,8 @@ class _DrawerHomeState extends State<DrawerHome> {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: const [
-          DrawerHeader(
+        children: [
+          const DrawerHeader(
               child: Column(
             children: [
               Row(
@@ -22,25 +23,28 @@ class _DrawerHomeState extends State<DrawerHome> {
               ),
             ],
           )),
-          ListTile(
+          const ListTile(
             leading: Icon(FontAwesomeIcons.graduationCap),
             title: Text("Aulas"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(FontAwesomeIcons.arrowUpRightDots),
             title: Text("Evolução"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.calendar_today),
             title: Text("Calendário"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.settings),
             title: Text("Configurações"),
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text("Sair"),
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text("Sair"),
+            onTap: () {
+              context.go('/');
+            },
           ),
         ],
       ),

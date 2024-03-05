@@ -3,8 +3,9 @@ import 'package:studee_educational/components/drawerhome_screen.dart';
 
 class BaseScaffold extends StatefulWidget {
   final Widget body;
+  final bool showAppBar;
 
-  const BaseScaffold({required this.body, super.key});
+  const BaseScaffold({required this.body, this.showAppBar = true, super.key});
 
   @override
   State<BaseScaffold> createState() => _BaseScaffoldState();
