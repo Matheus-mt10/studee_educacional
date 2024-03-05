@@ -26,6 +26,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
             ),
             const Input(label: 'E-mail'),
+            SizedBox(
+                width: 150,
+                height: 50,
+                child: FilledButton(
+                    onPressed: () {}, child: const Text("Enviar"))),
             const Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(

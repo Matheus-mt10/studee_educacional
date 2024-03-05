@@ -51,9 +51,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 width: 300,
                 height: 60,
                 child: FilledButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/EsqueciMinhaSenha');
+                    },
                     child: const Text(
                       'Esqueci minha senha',
+                      style: TextStyle(fontSize: 18),
+                    ))),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: SizedBox(
+                width: 150,
+                height: 60,
+                child: FilledButton(
+                    onPressed: () {
+                      context.go('/');
+                    },
+                    child: const Text(
+                      'Voltar',
                       style: TextStyle(fontSize: 18),
                     ))),
           ),
