@@ -15,6 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return BaseScaffold(
       showAppBar: false,
+      showBottomBar: false,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -5,8 +5,9 @@ import 'package:studee_educational/components/drawerhome_screen.dart';
 class BaseScaffold extends StatefulWidget {
   final Widget body;
   final bool showAppBar;
+  final bool showBottomBar;
 
-  const BaseScaffold({required this.body, this.showAppBar = true, super.key});
+  const BaseScaffold({required this.body, this.showAppBar = true, this.showBottomBar=true ,super.key});
 
   @override
   State<BaseScaffold> createState() => _BaseScaffoldState();
@@ -31,22 +32,25 @@ class _BaseScaffoldState extends State<BaseScaffold> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
         ),
-        bottomNavigationBar: BottomAppBar(
+        bottomNavigationBar: widget.showAppBar ? BottomAppBar(
           color: Colors.black12,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
               IconButton(
-                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.solidUser)),
+                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
               IconButton(
-                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.clipboardList)),
+                  onPressed: () {},
+                  icon: const Icon(FontAwesomeIcons.solidUser)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(FontAwesomeIcons.clipboardList)),
               IconButton(
                   onPressed: () {},
                   icon: const Icon(FontAwesomeIcons.magnifyingGlass))
             ],
           ),
-        ),
+        ):null,
       ),
     );
   }
