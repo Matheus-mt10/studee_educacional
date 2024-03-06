@@ -13,7 +13,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return const BaseScaffold(
       body: Center(
-        child: Text("data"),
+        child: Column(
+          children: [
+            Card(
+                color: Colors.amber,
+                shadowColor: Colors.black12,
+                child: Column(
+                  children: <Widget>[
+                    ListTile(
+                      title: Text('data'),
+                    )
+                  ],
+                ))
+          ],
+        ),
       ),
     );
   }
