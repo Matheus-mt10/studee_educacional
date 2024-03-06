@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:studee_educational/components/drawerhome_screen.dart';
 
 class BaseScaffold extends StatefulWidget {
@@ -29,6 +30,22 @@ class _BaseScaffoldState extends State<BaseScaffold> {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.black12,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.solidUser)),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.clipboardList)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(FontAwesomeIcons.magnifyingGlass))
+            ],
+          ),
         ),
       ),
     );
