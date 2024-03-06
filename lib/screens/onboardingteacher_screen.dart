@@ -14,6 +14,7 @@ class _OnboardingTeacherState extends State<OnboardingTeacher> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      showAppBar: false,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
