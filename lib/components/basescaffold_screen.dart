@@ -37,7 +37,9 @@ class _BaseScaffoldState extends State<BaseScaffold> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              
               IconButton(
+                  
                   onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
               IconButton(
                   onPressed: () {},
