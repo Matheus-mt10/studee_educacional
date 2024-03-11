@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/drawerhome_screen.dart';
 
 class BaseScaffold extends StatefulWidget {
@@ -7,7 +8,11 @@ class BaseScaffold extends StatefulWidget {
   final bool showAppBar;
   final bool showBottomBar;
 
-  const BaseScaffold({required this.body, this.showAppBar = true, this.showBottomBar=true ,super.key});
+  const BaseScaffold(
+      {required this.body,
+      this.showAppBar = true,
+      this.showBottomBar = true,
+      super.key});
 
   @override
   State<BaseScaffold> createState() => _BaseScaffoldState();
@@ -32,27 +37,25 @@ class _BaseScaffoldState extends State<BaseScaffold> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
         ),
-        bottomNavigationBar: widget.showAppBar ? BottomAppBar(
-          color: Colors.black12,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              
-              IconButton(
-                  
-                  onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.solidUser)),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.clipboardList)),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.magnifyingGlass))
-            ],
+        bottomNavigationBar:
+            BottomNavigationBar(items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.house),
+            label: 'Home',
           ),
-        ):null,
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.bookOpen),
+            label: 'Matérias',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.solidBell),
+            label: 'notificações',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.solidUser),
+            label: 'Perfil',
+          ),
+        ]),
       ),
     );
   }
