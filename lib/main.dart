@@ -7,6 +7,7 @@ import 'package:studee_educational/screens/login_screen.dart';
 import 'package:studee_educational/screens/onboarding_screen.dart';
 import 'package:studee_educational/screens/onboardingstudent_screen.dart';
 import 'package:studee_educational/screens/onboardingteacher_screen.dart';
+import 'package:studee_educational/screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,9 +34,14 @@ final _router = GoRouter(routes: [
     path: '/cadastroAluno',
     builder: (context, state) => const OnboardingStudent(),
   ),
-  GoRoute(path: '/EsqueciMinhaSenha',
-  builder: (context, state) => const ForgotPassword(),
+  GoRoute(
+    path: '/EsqueciMinhaSenha',
+    builder: (context, state) => const ForgotPassword(),
   ),
+  GoRoute(
+    path: '/profile',
+    builder: (context, state) => const ProfileScreen(),
+  )
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {

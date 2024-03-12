@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:studee_educational/components/drawerhome_screen.dart';
 
 class BaseScaffold extends StatefulWidget {
@@ -36,25 +38,38 @@ class _BaseScaffoldState extends State<BaseScaffold> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
         ),
-        bottomNavigationBar:
-            BottomNavigationBar(items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.house),
-            label: 'Home',
+        bottomNavigationBar: Container(
+          color: Colors.black,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12),
+            child: GNav(
+              gap: 10,
+              backgroundColor: Colors.black,
+              color: Colors.white,
+              activeColor: Colors.white,
+              tabBackgroundColor: Colors.grey.shade800,
+              padding: const EdgeInsets.all(16.0),
+              tabs: [
+                GButton(
+                  icon: FontAwesomeIcons.house,
+                  text: 'Home',
+                  onPressed: () {},
+                ),
+                const GButton(
+                  icon: FontAwesomeIcons.solidBell,
+                  text: 'Notificações',
+                ),
+                GButton(
+                  icon: FontAwesomeIcons.solidUser,
+                  text: 'Perfil',
+                  onPressed: () {
+                    context.push('/profile');
+                  },
+                ),
+              ],
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.bookOpen),
-            label: 'Matérias',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.solidBell),
-            label: 'notificações',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.solidUser),
-            label: 'Perfil',
-          ),
-        ]),
+        ),
       ),
     );
   }

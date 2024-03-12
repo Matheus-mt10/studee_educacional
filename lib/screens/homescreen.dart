@@ -14,18 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return const BaseScaffold(
       body: Center(
         child: Column(
-          children: [
-            Card(
-                color: Colors.amber,
-                shadowColor: Colors.black12,
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      title: Text('data'),
-                    )
-                  ],
-                ))
-          ],
+          children: [],
         ),
       ),
     );
