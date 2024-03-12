@@ -43,7 +43,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   height: 15,
                 ),
                 Row(
-                  children: [BigSquareBtn()],
+                  children: [
+                    BigSquareBtn(
+                      icon: FontAwesomeIcons.m,
+                    )],
                 )
               ],
             ),
