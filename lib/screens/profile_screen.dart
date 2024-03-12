@@ -22,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: const SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0),
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 18),
             child: Column(
               children: [
                 CircleAvatar(
@@ -40,14 +40,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Row(
                   children: [
                     BigSquareBtn(
                       icon: FontAwesomeIcons.m,
-                    )],
-                )
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 20.0),
+                      child: Text(
+                        "Dark Mode",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    BigSquareBtn(
+                      icon: FontAwesomeIcons.n,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 20.0),
+                      child: Text(
+                        "Editar Perfil",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
