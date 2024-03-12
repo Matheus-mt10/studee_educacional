@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BigSquareBtn extends StatefulWidget {
   final IconData icon;
@@ -22,7 +21,7 @@ class _BigSquareBtnState extends State<BigSquareBtn> {
             borderRadius: BorderRadiusDirectional.circular(10),
             color: Colors.amber,
           ),
-          child: const widget.),
+          child: Icon(widget.icon)),
     );
   }
 }
