@@ -38,38 +38,43 @@ class _BaseScaffoldState extends State<BaseScaffold> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: widget.body,
         ),
-        bottomNavigationBar: widget.showBottomBar ? Container(
-          color: Colors.black,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12),
-            child: GNav(
-              gap: 10,
-              backgroundColor: Colors.black,
-              color: Colors.white,
-              activeColor: Colors.white,
-              tabBackgroundColor: Colors.grey.shade800,
-              padding: const EdgeInsets.all(16.0),
-              tabs: [
-                GButton(
-                  icon: FontAwesomeIcons.house,
-                  text: 'Home',
-                  onPressed: () {},
+        bottomNavigationBar: widget.showBottomBar
+            ? Container(
+                color: Colors.black,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10.0, vertical: 12),
+                  child: GNav(
+                    gap: 10,
+                    backgroundColor: Colors.black,
+                    color: Colors.white,
+                    activeColor: Colors.white,
+                    tabBackgroundColor: Colors.grey.shade800,
+                    padding: const EdgeInsets.all(16.0),
+                    tabs: [
+                      GButton(
+                        icon: FontAwesomeIcons.house,
+                        text: 'Home',
+                        onPressed: () {
+                          context.push('/homePage');
+                        },
+                      ),
+                      const GButton(
+                        icon: FontAwesomeIcons.solidBell,
+                        text: 'Notificações',
+                      ),
+                      GButton(
+                        icon: FontAwesomeIcons.solidUser,
+                        text: 'Perfil',
+                        onPressed: () {
+                          context.push('/profile');
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-                const GButton(
-                  icon: FontAwesomeIcons.solidBell,
-                  text: 'Notificações',
-                ),
-                GButton(
-                  icon: FontAwesomeIcons.solidUser,
-                  text: 'Perfil',
-                  onPressed: () {
-                    context.push('/profile');
-                  },
-                ),
-              ],
-            ),
-          ),
-        ): null,
+              )
+            : null,
       ),
     );
   }

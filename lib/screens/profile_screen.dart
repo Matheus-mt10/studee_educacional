@@ -14,35 +14,65 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return const BaseScaffold(
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 18),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  backgroundColor: Colors.black,
-                  radius: 70,
-                ),
-                Text(
-                  "Matheus Santana",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Análise e desenvolvimento de sistemas",
-                  style: TextStyle(
-                    fontSize: 14,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 18),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.black,
+                    radius: 70,
                   ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                OptionBtnProfile(
-                  iconBtn: FontAwesomeIcons.a,
-                  iconSize: 10,
-                  optionText: 'Dark Modeeee',
-                ),
-              ],
+                  Text(
+                    "Matheus Santana",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "Análise e desenvolvimento de sistemas",
+                    style: TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  OptionBtnProfile(
+                    iconBtn: FontAwesomeIcons.a,
+                    iconSize: 10,
+                    optionText: 'Edit profile',
+                    location: '/',
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  OptionBtnProfile(
+                    iconBtn: FontAwesomeIcons.a,
+                    iconSize: 10,
+                    optionText: 'Mudar Senha',
+                    location: '',
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  OptionBtnProfile(
+                    iconBtn: FontAwesomeIcons.a,
+                    iconSize: 10,
+                    optionText: 'Config. Gerais',
+                    location: '',
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  OptionBtnProfile(
+                    iconBtn: FontAwesomeIcons.a,
+                    iconSize: 10,
+                    optionText: 'Convide um amigo',
+                    location: '',
+                  ),
+                ],
+              ),
             ),
           ),
         ),
