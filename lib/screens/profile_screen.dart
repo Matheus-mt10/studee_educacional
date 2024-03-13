@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:studee_educational/components/big_square_btn.dart';
+import 'package:studee_educational/components/basescaffold_screen.dart';
+import 'package:studee_educational/components/option_btn_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -12,14 +13,8 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello World'),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        actions: const [Icon(FontAwesomeIcons.solidBell)],
-      ),
-      body: const SafeArea(
+    return const BaseScaffold(
+      body: SafeArea(
         child: Center(
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 18),
@@ -42,36 +37,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 SizedBox(
                   height: 25,
                 ),
-                Row(
-                  children: [
-                    BigSquareBtn(
-                      icon: FontAwesomeIcons.m,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20.0),
-                      child: Text(
-                        "Dark Mode",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    BigSquareBtn(
-                      icon: FontAwesomeIcons.n,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20.0),
-                      child: Text(
-                        "Editar Perfil",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    )
-                  ],
+                OptionBtnProfile(
+                  iconBtn: FontAwesomeIcons.a,
+                  iconSize: 10,
+                  optionText: 'Dark Modeeee',
                 ),
               ],
             ),
