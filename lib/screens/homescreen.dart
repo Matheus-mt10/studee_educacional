@@ -35,12 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 options: CarouselOptions(
                     onPageChanged: (index, reason) =>
                         setState(() => activeIndex = index),
-                    height: 300,
+                    height: 180,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 5),
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height)),
             const SizedBox(height: 32),
+            
+
           ],
         ),
       ),
