@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
+import 'package:studee_educational/components/elevated_circle_btn.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -41,8 +43,39 @@ class _HomeScreenState extends State<HomeScreen> {
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height)),
             const SizedBox(height: 32),
-            
-
+            Container(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  ElevatedCircleBtn(
+                      icon: FontAwesomeIcons.calendarDay,
+                      textBtn: "Calendário",
+                      styleBtn: CircleBorder(),
+                      padding: 10),
+                  ElevatedCircleBtn(
+                      icon: FontAwesomeIcons.listCheck,
+                      textBtn: "Tarefas",
+                      styleBtn: CircleBorder(),
+                      padding: 10),
+                  ElevatedCircleBtn(
+                      icon: FontAwesomeIcons.usersLine,
+                      textBtn: "Grupos",
+                      styleBtn: CircleBorder(),
+                      padding: 10),
+                  ElevatedCircleBtn(
+                      icon: FontAwesomeIcons.link,
+                      textBtn: "Links",
+                      styleBtn: CircleBorder(),
+                      padding: 10),
+                  ElevatedCircleBtn(
+                      icon: FontAwesomeIcons.solidComments,
+                      textBtn: "Chats",
+                      styleBtn: CircleBorder(),
+                      padding: 10)
+                ],
+              ),
+            )
           ],
         ),
       ),
