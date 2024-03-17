@@ -72,7 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: FontAwesomeIcons.solidComments,
                       textBtn: "Chats",
                       styleBtn: CircleBorder(),
-                      padding: 10)
+                      padding: 10),
+                  SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             )

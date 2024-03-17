@@ -17,17 +17,12 @@ class ElevatedCircleBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {},
-      child: Column(
-        children: [
-          Icon(
-            icon,
-          ),
-          SizedBox(height: 8),
-          Text(textBtn),
-        ],
+      child: Icon(
+        icon,
       ),
       style: ElevatedButton.styleFrom(
           shape: styleBtn, padding: EdgeInsets.all(padding)),
+          
     );
   }
 }
