@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 import 'package:studee_educational/components/elevated_circle_btn.dart';
+import 'package:studee_educational/components/title.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return BaseScaffold(
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CarouselSlider.builder(
                 itemCount: urlImages.length,
@@ -43,8 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height)),
             const SizedBox(height: 32),
+            TitleStyle(titleText: "Acesso Rápido", fontSize: 24),
             Container(
-              height: 150,
+              height: 110,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -73,12 +76,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       textBtn: "Chats",
                       styleBtn: CircleBorder(),
                       padding: 10),
-                  SizedBox(
-                    height: 20,
-                  ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TitleStyle(titleText: "Próximas Entregas", fontSize: 24),
           ],
         ),
       ),

@@ -15,22 +15,25 @@ class ElevatedCircleBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 90,
-      child: ElevatedButton(
-        onPressed: () {},
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-            ),
-            Text(textBtn)
-          ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: SizedBox(
+        width: 90,
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+              ),
+              Text(textBtn)
+            ],
+          ),
+          style: ElevatedButton.styleFrom(
+              shape: styleBtn, padding: EdgeInsets.all(padding)),
         ),
-        style: ElevatedButton.styleFrom(
-            shape: styleBtn, padding: EdgeInsets.all(padding)),
       ),
     );
   }
