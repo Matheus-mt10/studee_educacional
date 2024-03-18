@@ -76,6 +76,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 20,
                   ),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                      onPressed: () {},
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(FontAwesomeIcons.a),
+                          Text("data"),
+                        ],
+                      ))
                 ],
               ),
             )
