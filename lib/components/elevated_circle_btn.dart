@@ -15,14 +15,23 @@ class ElevatedCircleBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Icon(
-        icon,
+    return SizedBox(
+      width: 90,
+      child: ElevatedButton(
+        onPressed: () {},
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+            ),
+            Text(textBtn)
+          ],
+        ),
+        style: ElevatedButton.styleFrom(
+            shape: styleBtn, padding: EdgeInsets.all(padding)),
       ),
-      style: ElevatedButton.styleFrom(
-          shape: styleBtn, padding: EdgeInsets.all(padding)),
-          
     );
   }
 }

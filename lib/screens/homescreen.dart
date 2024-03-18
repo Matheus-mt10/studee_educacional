@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   ElevatedCircleBtn(
                       icon: FontAwesomeIcons.calendarDay,
-                      textBtn: "Calendário",
+                      textBtn: "Entregas",
                       styleBtn: CircleBorder(),
                       padding: 10),
                   ElevatedCircleBtn(
@@ -76,16 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 20,
                   ),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(shape: CircleBorder()),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(FontAwesomeIcons.a),
-                          Text("data"),
-                        ],
-                      ))
                 ],
               ),
             )
