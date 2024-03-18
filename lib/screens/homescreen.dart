@@ -83,6 +83,9 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20,
             ),
             TitleStyle(titleText: "Próximas Entregas", fontSize: 24),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),
