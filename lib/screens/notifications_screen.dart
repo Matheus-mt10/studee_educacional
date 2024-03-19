@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 
-class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({super.key});
+class NoticationsScreen extends StatefulWidget {
+  const NoticationsScreen({super.key});
 
   @override
-  State<NotificationScreen> createState() => _NotificationScreenState();
+  State<NoticationsScreen> createState() => _NoticationsScreenState();
 }
 
-class _NotificationScreenState extends State<NotificationScreen> {
+class _NoticationsScreenState extends State<NoticationsScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
       body: Center(
         child: Column(
-          children: [Text("data")],
+          children: [Text('dsdsds')],
         ),
       ),
     );

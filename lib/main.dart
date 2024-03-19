@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:studee_educational/screens/forgotpassword_screen.dart';
 import 'package:studee_educational/screens/homescreen.dart';
 import 'package:studee_educational/screens/login_screen.dart';
+import 'package:studee_educational/screens/notifications_screen.dart';
 import 'package:studee_educational/screens/onboarding_screen.dart';
 import 'package:studee_educational/screens/onboardingstudent_screen.dart';
 import 'package:studee_educational/screens/onboardingteacher_screen.dart';
@@ -42,7 +43,10 @@ final _router = GoRouter(routes: [
     path: '/profile',
     builder: (context, state) => const ProfileScreen(),
   ),
-  GoRoute(path: '/notiificacoes', builder: (context, state) => ProfileScreen(),)
+  GoRoute(
+    path: '/notificacoes',
+    builder: (context, state) => const NoticationsScreen(),
+  )
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {
