@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 import 'package:studee_educational/components/elevated_circle_btn.dart';
+import 'package:studee_educational/components/task_card.dart';
 import 'package:studee_educational/components/title.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -84,8 +85,21 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             TitleStyle(titleText: "Próximas Entregas", fontSize: 24),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
+            Container(
+              height: 180,
+              child: ListView(
+                children: [
+                  TaskCard(
+                      matter: "Design Digital",
+                      TaskDescript: "Pesquisa dos tipos de imagem"),
+                  TaskCard(
+                      matter: "Marketing",
+                      TaskDescript: "Realizar pesquisa de Persona do produto"),
+                ],
+              ),
+            )
           ],
         ),
       ),
