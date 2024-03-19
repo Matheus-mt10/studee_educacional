@@ -22,7 +22,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 children: [
                   CircleAvatar(
-                    backgroundColor: Colors.black,
+                    // backgroundColor: Colors.black,
+                    backgroundImage: NetworkImage(
+                        "https://i.pinimg.com/originals/9e/d7/12/9ed7129ff1779c1cee7686c372714320.jpg"),
                     radius: 70,
                   ),
                   Text(

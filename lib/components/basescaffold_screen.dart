@@ -59,9 +59,12 @@ class _BaseScaffoldState extends State<BaseScaffold> {
                           context.push('/homePage');
                         },
                       ),
-                      const GButton(
+                      GButton(
                         icon: FontAwesomeIcons.solidBell,
                         text: 'Notificações',
+                        onPressed: () {
+                          context.push('/notificacoes');
+                        },
                       ),
                       GButton(
                         icon: FontAwesomeIcons.solidUser,

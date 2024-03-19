@@ -41,7 +41,8 @@ final _router = GoRouter(routes: [
   GoRoute(
     path: '/profile',
     builder: (context, state) => const ProfileScreen(),
-  )
+  ),
+  GoRoute(path: '/notiificacoes', builder: (context, state) => ProfileScreen(),)
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {
