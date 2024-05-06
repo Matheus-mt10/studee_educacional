@@ -25,7 +25,7 @@ class _NoticationsScreenState extends State<NoticationsScreen> {
                 padding: const EdgeInsets.only(top: 10.0),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 80,
+                  height: 90,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,13 +52,13 @@ class _NoticationsScreenState extends State<NoticationsScreen> {
                       Text(
                         'Notificações',
                         style: TextStyle(color: Colors.black, fontSize: 26),
+                      ),
+                      Divider(
+                        thickness: 2,
                       )
                     ],
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
               ),
               Card(
                 child: ListTile(
