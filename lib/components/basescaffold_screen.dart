@@ -31,12 +31,15 @@ class _BaseScaffoldState extends State<BaseScaffold> {
                 title: const Text('Home'),
                 actions: [
                   IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.notifications))
+                      onPressed: () {
+                        context.push('/notificacoes');
+                      },
+                      icon: const Icon(Icons.notifications))
                 ],
               )
             : null,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: widget.body,
         ),
         bottomNavigationBar: widget.showBottomBar

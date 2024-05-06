@@ -15,14 +15,30 @@ class _DrawerHomeState extends State<DrawerHome> {
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(
-              child: Column(
-            children: [
-              Row(
-                children: [Icon(Icons.account_circle), Text("Matheus Santana")],
-              ),
-            ],
-          )),
+          DrawerHeader(
+              decoration: BoxDecoration(color: Colors.black),
+              child: InkWell(
+                onTap: () {
+                  context.push('/profile');
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      radius: 38,
+                      backgroundImage: AssetImage('images/super.jpg'),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Matheus Santana",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              )),
           const ListTile(
             leading: Icon(FontAwesomeIcons.graduationCap),
             title: Text("Aulas"),
