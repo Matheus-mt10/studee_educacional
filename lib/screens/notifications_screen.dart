@@ -21,13 +21,32 @@ class _NoticationsScreenState extends State<NoticationsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Notificações',
-                style: TextStyle(fontSize: 20),
+                width: double.infinity,
+                height: 80,
+                child: Container(
+                    decoration: BoxDecoration(color: Colors.black),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        InkWell(
+                            onTap: () {},
+                            child: Icon(
+                              FontAwesomeIcons.arrowLeft,
+                              color: Colors.white,
+                            )),
+                        Text(
+                          'Notificações',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    )),
               ),
               Divider(),
+              SizedBox(
+                height: 20,
+              ),
               Card(
                 child: ListTile(
                   leading: Icon(FontAwesomeIcons.calendar),
