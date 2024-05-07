@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:studee_educational/components/Classes_btn.dart';
 
 class ClassesScreen extends StatefulWidget {
   const ClassesScreen({super.key});
@@ -70,37 +71,37 @@ class _ClassesScreenState extends State<ClassesScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Suas Matérias'),
-            Container(
-              width: 180,
-              height: 70,
-              decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 1,
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: Text(
+                    'Suas Matérias',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                   ),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.amber,
-                      ),
-                      height: 40,
-                      width: 40,
-                      child: Image.asset('images/super.jpg')),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 14.0),
-                    child: Text(
-                      "Business",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ClassesBtn(image: 'images/business.png', titleCard: 'Business'),
+                ClassesBtn(
+                    image: 'images/marketing.png', titleCard: 'Marketing'),
+              ],
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ClassesBtn(image: 'images/design.png', titleCard: "Design"),
+                ClassesBtn(
+                    image: 'images/programming.png', titleCard: 'Programação'),
+              ],
             )
           ],
         ),
