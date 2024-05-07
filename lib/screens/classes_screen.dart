@@ -72,18 +72,33 @@ class _ClassesScreenState extends State<ClassesScreen> {
           children: [
             Text('Suas Matérias'),
             Container(
-              width: 150,
+              width: 180,
+              height: 70,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 1)),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(10)),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    color: Colors.amber,
-                    height: 40,
-                    width: 40,
-                    child: Icon(FontAwesomeIcons.desktop),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.amber,
+                      ),
+                      height: 40,
+                      width: 40,
+                      child: Image.asset('images/super.jpg')),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 14.0),
+                    child: Text(
+                      "Business",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
                   ),
-                  Text("dsdsdsds")
                 ],
               ),
             )
