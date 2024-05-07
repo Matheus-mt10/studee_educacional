@@ -102,6 +102,26 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 ClassesBtn(
                     image: 'images/programming.png', titleCard: 'Programação'),
               ],
+            ),
+            Text("Curso populares"),
+            Container(
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black, width: 1)),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Image.asset('images/html.jpg'),
+                    ],
+                  ),
+                  Row(
+                    children: [Text("Curso de flutter")],
+                  ),
+                  Row(
+                    children: [Text("R\$ 100,00"), Icon(FontAwesomeIcons.star)],
+                  )
+                ],
+              ),
             )
           ],
         ),
