@@ -39,9 +39,12 @@ class _DrawerHomeState extends State<DrawerHome> {
                   ],
                 ),
               )),
-          const ListTile(
+           ListTile(
             leading: Icon(FontAwesomeIcons.graduationCap),
             title: Text("Aulas"),
+            onTap: () {
+              context.push('/aulas');
+            },
           ),
           const ListTile(
             leading: Icon(FontAwesomeIcons.arrowUpRightDots),

@@ -1,6 +1,7 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:studee_educational/screens/classes_screen.dart';
 import 'package:studee_educational/screens/forgotpassword_screen.dart';
 import 'package:studee_educational/screens/homescreen.dart';
 import 'package:studee_educational/screens/login_screen.dart';
@@ -46,7 +47,9 @@ final _router = GoRouter(routes: [
   GoRoute(
     path: '/notificacoes',
     builder: (context, state) => const NoticationsScreen(),
-  )
+  ),
+  GoRoute(path: '/aulas',
+  builder: (context, state) => ClassesScreen(),)
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {
