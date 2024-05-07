@@ -10,6 +10,8 @@ class ClassesScreen extends StatefulWidget {
 }
 
 class _ClassesScreenState extends State<ClassesScreen> {
+  _ClassesScreenState();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,20 +107,75 @@ class _ClassesScreenState extends State<ClassesScreen> {
             ),
             Text("Curso populares"),
             Container(
+              width: 255,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.black, width: 1)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Container(
+                    width: 235,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/html.jpg',
+                      ),
+                    ),
+                  ),
                   Row(
                     children: [
-                      Image.asset('images/html.jpg'),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0, top: 8),
+                          child: Text(
+                            "Fundamentos do HTML e CSS",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                            softWrap: false,
+                          ),
+                        ),
+                      )
                     ],
                   ),
                   Row(
-                    children: [Text("Curso de flutter")],
-                  ),
-                  Row(
-                    children: [Text("R\$ 100,00"), Icon(FontAwesomeIcons.star)],
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0, top: 5),
+                        child: Text(
+                          "R\$ 100,00",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 16),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(
+                            'images/star.png',
+                            scale: 25,
+                          ),
+                          Image.asset(
+                            'images/star.png',
+                            scale: 25,
+                          ),
+                          Image.asset(
+                            'images/star.png',
+                            scale: 25,
+                          ),
+                          Image.asset(
+                            'images/star.png',
+                            scale: 25,
+                          ),
+                          Image.asset(
+                            'images/star.png',
+                            scale: 25,
+                          ),
+                        ],
+                      )
+                    ],
                   )
                 ],
               ),
