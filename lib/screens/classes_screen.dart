@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:studee_educational/components/Classes_btn.dart';
-import 'package:studee_educational/components/card_popular_courses.dart';
-import 'package:studee_educational/models/mocks/popular_courses_dto.dart';
+// import 'package:studee_educational/components/card_popular_courses.dart';
+// import 'package:studee_educational/models/mocks/popular_courses_dto.dart';
 
 class ClassesScreen extends StatefulWidget {
   ClassesScreen({super.key});
@@ -14,16 +14,16 @@ class ClassesScreen extends StatefulWidget {
 class _ClassesScreenState extends State<ClassesScreen> {
   _ClassesScreenState();
 
-  final List<PopularCoursesDto> _popularCoursesList = [
-    PopularCoursesDto(
-        image: 'images/jobs.jpeg', price: 20, titleCourse: "titleCourse"),
-    PopularCoursesDto(
-        image: 'images/super.jpg', price: 200, titleCourse: "Corinthians"),
-    PopularCoursesDto(
-        image: 'images/jobs.jpeg',
-        price: 2000,
-        titleCourse: "Ronaldo brilha muito no corinthians"),
-  ];
+  // final List<PopularCoursesDto> _popularCoursesList = [
+  //   PopularCoursesDto(
+  //       image: 'images/jobs.jpeg', price: 20, titleCourse: "titleCourse"),
+  //   PopularCoursesDto(
+  //       image: 'images/super.jpg', price: 200, titleCourse: "Corinthians"),
+  //   PopularCoursesDto(
+  //       image: 'images/jobs.jpeg',
+  //       price: 2000,
+  //       titleCourse: "Ronaldo brilha muito no corinthians"),
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -132,31 +132,18 @@ class _ClassesScreenState extends State<ClassesScreen> {
               SizedBox(
                 height: 16,
               ),
-              Row(
-                children: [
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: _popularCoursesList.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      var popularCourses = _popularCoursesList[index];
-                      return CardPopularCourses(
-                          image: popularCourses.image, price: popularCourses.price.toString(), titleCourse: popularCourses.titleCourse);
-                    },
-                  ),
-
-                  // CardPopularCourses(
-                  //     image: 'images/html.jpg',
-                  //     price: 'R\$ 250,00 ',
-                  //     titleCourse: 'titleCourse'),
-                  // CardPopularCourses(
-                  //     image: 'images/html.jpg',
-                  //     price: 'R\$ 250,00 ',
-                  //     titleCourse: 'titleCourse'),
-                  // CardPopularCourses(
-                  //     image: 'images/html.jpg',
-                  //     price: 'R\$ 250,00 ',
-                  //     titleCourse: 'titleCourse'),
-                ],
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: 1,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    title: Row(
+                      children: [
+                        Text('data'),
+                      ],
+                    ),
+                  );
+                },
               )
             ],
           ),
