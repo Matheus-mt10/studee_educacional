@@ -135,6 +135,7 @@ class _ClassesScreenState extends State<ClassesScreen> {
               Row(
                 children: [
                   ListView.builder(
+                    shrinkWrap: true,
                     itemCount: _popularCoursesList.length,
                     itemBuilder: (BuildContext context, int index) {
                       var popularCourses = _popularCoursesList[index];
