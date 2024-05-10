@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
+import 'package:studee_educational/models/mocks/notification_dto.dart';
 
 class NoticationsScreen extends StatefulWidget {
   const NoticationsScreen({super.key});
@@ -11,6 +13,25 @@ class NoticationsScreen extends StatefulWidget {
 }
 
 class _NoticationsScreenState extends State<NoticationsScreen> {
+  List<NotificationDto> _notificationList = [
+    NotificationDto(
+        icon: Icon(FontAwesomeIcons.calendar),
+        title: Text("Design - Tipografia "),
+        subtitle: Text("Realizar a entrega na próxima aula")),
+    NotificationDto(
+        icon: Icon(FontAwesomeIcons.figma),
+        title: Text("Design - Prototipagem com Figma "),
+        subtitle: Text("Realizar a entrega na próxima aula")),
+    NotificationDto(
+        icon: Icon(FontAwesomeIcons.code),
+        title: Text("Des. Front End - HTML e CSS "),
+        subtitle: Text("Media-Queries - Adaptando a multíplos dispositivos")),
+    NotificationDto(
+        icon: Icon(FontAwesomeIcons.dev),
+        title: Text("Des. Mobile - Conhecendo o Flutter "),
+        subtitle: Text("Vamos dar início aos estudos no FrameWork Flutter")),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
@@ -60,30 +81,49 @@ class _NoticationsScreenState extends State<NoticationsScreen> {
                   ),
                 ),
               ),
-              Card(
-                child: ListTile(
-                  leading: Icon(FontAwesomeIcons.calendar),
-                  title: Text(
-                    'Design Digital',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  subtitle: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Pesquisa dos tipos de imagem '),
-                      SizedBox(
-                        height: 4,
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: _notificationList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Slidable(
+                    startActionPane: ActionPane(
+                      motion: StretchMotion(),
+                      children: [
+                        SlidableAction(
+                          backgroundColor: Colors.black,
+                          icon: FontAwesomeIcons.boxArchive,
+                          label: 'Arquivar',
+                          onPressed: (context) => _OnDimissed(),
+                        ),
+                      ],
+                    ),
+                    endActionPane:
+                        ActionPane(motion: BehindMotion(), children: [
+                      SlidableAction(
+                        backgroundColor: Colors.red,
+                        icon: FontAwesomeIcons.boxArchive,
+                        label: 'Excluir',
+                        onPressed: (context) => _OnDimissed(),
                       ),
-                      Text('Entrega: 22/02/2022'),
-                    ],
-                  ),
-                ),
-              )
+                    ]),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 2.0, bottom: 2),
+                      child: ListTile(
+                        leading: _notificationList[index].icon,
+                        title: _notificationList[index].title,
+                        subtitle: _notificationList[index].subtitle,
+                        
+                      ),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
       ),
     );
   }
+
+  void _OnDimissed() {}
 }
