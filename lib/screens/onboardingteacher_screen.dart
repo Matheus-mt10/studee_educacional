@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 import 'package:studee_educational/components/input.dart';
@@ -24,11 +25,7 @@ class _OnboardingTeacherState extends State<OnboardingTeacher> {
                 'Insira as informações abaixo para prosseguir com o cadastro de Professor',
                 style: TextStyle(fontSize: 24),
               ),
-              const Input(label: 'Nome Completo'),
-              const Input(label: 'Data de Nascimento'),
-              const Input(label: 'CPF'),
-              const Input(label: 'Matéria'),
-              const Input(label: 'Código do Professor'),
+              // Input(label: "Nome completo", icon: Icon(FontAwesomeIcons.a), textIntenal: "nome completo"),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Row(

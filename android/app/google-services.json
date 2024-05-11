@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492173984525",
+    "project_id": "studee-educational",
+    "storage_bucket": "studee-educational.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492173984525:android:3d7a2986ee442df7e62644",
+        "android_client_info": {
+          "package_name": "com.example.studee_educational"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2qnMOccAeTXpYAQ24-ruUmO59Ht4DmSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

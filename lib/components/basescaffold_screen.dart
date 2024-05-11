@@ -39,7 +39,7 @@ class _BaseScaffoldState extends State<BaseScaffold> {
               )
             : null,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: widget.body,
         ),
         bottomNavigationBar: widget.showBottomBar

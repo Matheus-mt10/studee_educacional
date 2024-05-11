@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
 import 'package:studee_educational/components/input.dart';
@@ -26,7 +27,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 style: TextStyle(fontSize: 24),
               ),
             ),
-            const Input(label: 'E-mail'),
+            // Input(label: "Email", icon: Icon(FontAwesomeIcons.mailchimp), textIntenal: "Digite seu email"),
             SizedBox(
                 width: 150,
                 height: 50,

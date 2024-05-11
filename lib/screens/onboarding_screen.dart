@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
+import 'package:studee_educational/components/input.dart';
+import 'package:studee_educational/components/subtitle.dart';
+import 'package:studee_educational/components/title.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -14,66 +17,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return BaseScaffold(
         showAppBar: false,
+        showBottomBar: false,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: SizedBox(
-                    width: 300,
-                    height: 60,
-                    child: FilledButton(
-                        onPressed: () {
-                          context.push('/cadastroProfessor');
-                        },
-                        child: const Text(
-                          'Eu sou Professor',
-                          style: TextStyle(fontSize: 18),
-                        ))),
+              TitleStyle(
+                  titleText: "Vamos criar sua conta no Studee", fontSize: 30),
+              SizedBox(
+                height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: SizedBox(
-                    width: 300,
-                    height: 60,
-                    child: FilledButton(
-                        onPressed: () {
-                          context.push('/cadastroAluno');
-                        },
-                        child: const Text(
-                          'Eu sou Aluno',
-                          style: TextStyle(fontSize: 18),
-                        ))),
+              Subtitle(
+                  subtitle:
+                      "Por favor, insira as informações abaixo para criar seu login"),
+              SizedBox(
+                height: 50,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: SizedBox(
-                    width: 300,
-                    height: 60,
-                    child: FilledButton(
-                        onPressed: () {
-                          context.push('/EsqueciMinhaSenha');
-                        },
-                        child: const Text(
-                          'Esqueci minha senha',
-                          style: TextStyle(fontSize: 18),
-                        ))),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: SizedBox(
-                    width: 150,
-                    height: 60,
-                    child: FilledButton(
-                        onPressed: () {
-                          context.go('/');
-                        },
-                        child: const Text(
-                          'Voltar',
-                          style: TextStyle(fontSize: 18),
-                        ))),
-              ),
+              Input(label: "Nome", internalText: 'Nome Completo'),
+              Input(label: 'Email', internalText: 'Email')
             ],
           ),
         ));

@@ -10,8 +10,14 @@ import 'package:studee_educational/screens/onboarding_screen.dart';
 import 'package:studee_educational/screens/onboardingstudent_screen.dart';
 import 'package:studee_educational/screens/onboardingteacher_screen.dart';
 import 'package:studee_educational/screens/profile_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -48,8 +54,10 @@ final _router = GoRouter(routes: [
     path: '/notificacoes',
     builder: (context, state) => const NoticationsScreen(),
   ),
-  GoRoute(path: '/aulas',
-  builder: (context, state) => ClassesScreen(),)
+  GoRoute(
+    path: '/aulas',
+    builder: (context, state) => ClassesScreen(),
+  )
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {

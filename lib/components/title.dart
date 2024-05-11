@@ -12,12 +12,9 @@ class TitleStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: paddingLeft),
-      child: Text(
-        titleText,
-        style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-      ),
+    return Text(
+      titleText,
+      style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
     );
   }
 }
