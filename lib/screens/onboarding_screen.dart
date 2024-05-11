@@ -35,7 +35,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 height: 50,
               ),
               Input(label: "Nome", internalText: 'Nome Completo'),
-              Input(label: 'Email', internalText: 'Email')
+              Input(label: 'Email', internalText: 'Email'),
+              Input(label: 'Senha', internalText: 'Informe sua senha')
             ],
           ),
         ));

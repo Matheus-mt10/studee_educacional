@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Input extends StatefulWidget {
-  const Input({super.key, required this.label, required this.internalText});
+  const Input({super.key, required this.label, required this.internalText, this.obsText=false});
 
   final String label;
   final String internalText;
+  final bool obsText;
 
   @override
   State<Input> createState() => _InputState();
@@ -16,21 +17,23 @@ class _InputState extends State<Input> {
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 10.0),
         child: TextField(
+          obscureText: widget.obsText,
           decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(width: 2, color: Colors.black),
-                  borderRadius: BorderRadius.circular(50)),
-              focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(width: 2, color: Colors.blue),
-                  borderRadius: BorderRadius.circular(50)),
-              label: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
-                child: Text(
-                  widget.label,
-                  style: TextStyle(fontSize: 20, color: Colors.black),
-                ),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(width: 2, color: Colors.black),
+                borderRadius: BorderRadius.circular(50)),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(width: 2, color: Colors.blue),
+                borderRadius: BorderRadius.circular(50)),
+            label: Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(
+                widget.label,
+                style: TextStyle(fontSize: 20, color: Colors.black),
               ),
-              hintText: widget.internalText),
+            ),
+            hintText: widget.internalText,
+          ),
         ));
   }
 }
