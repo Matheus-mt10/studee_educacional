@@ -16,6 +16,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return BaseScaffold(
       showAppBar: false,
+      showBottomBar: false,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
