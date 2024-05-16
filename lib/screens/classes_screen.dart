@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/Classes_btn.dart';
 import 'package:studee_educational/components/card_popular_courses.dart';
 import 'package:studee_educational/models/mocks/popular_courses_dto.dart';
@@ -30,9 +31,14 @@ class _ClassesScreenState extends State<ClassesScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        leading: Icon(
-          FontAwesomeIcons.arrowLeft,
-          color: Colors.white,
+        leading: InkWell(
+          onTap: () {
+            context.go('/homepage');
+          },
+          child: Icon(
+            FontAwesomeIcons.arrowLeft,
+            color: Colors.white,
+          ),
         ),
         // title: Text(
         //   "Aulas",

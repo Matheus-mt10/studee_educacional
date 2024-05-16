@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
-import 'package:studee_educational/components/input.dart';
+
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
