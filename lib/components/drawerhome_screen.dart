@@ -39,7 +39,7 @@ class _DrawerHomeState extends State<DrawerHome> {
                   ],
                 ),
               )),
-           ListTile(
+          ListTile(
             leading: Icon(FontAwesomeIcons.graduationCap),
             title: Text("Aulas"),
             onTap: () {
@@ -50,9 +50,12 @@ class _DrawerHomeState extends State<DrawerHome> {
             leading: Icon(FontAwesomeIcons.arrowUpRightDots),
             title: Text("Evolução"),
           ),
-          const ListTile(
+          ListTile(
             leading: Icon(Icons.calendar_today),
             title: Text("Calendário"),
+            onTap: () {
+              context.push('/calendario');
+            },
           ),
           const ListTile(
             leading: Icon(Icons.settings),
