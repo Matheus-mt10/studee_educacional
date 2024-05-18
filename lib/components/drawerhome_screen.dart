@@ -57,9 +57,12 @@ class _DrawerHomeState extends State<DrawerHome> {
               context.push('/calendario');
             },
           ),
-          const ListTile(
+          ListTile(
             leading: Icon(Icons.settings),
             title: Text("Configurações"),
+            onTap: () {
+              context.push('/configuracoes');
+            },
           ),
           ListTile(
             leading: const Icon(Icons.exit_to_app),

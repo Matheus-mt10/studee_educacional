@@ -11,6 +11,12 @@ class CalendarScreen extends StatefulWidget {
 class _CalendarScreenState extends State<CalendarScreen> {
   DateTime today = DateTime.now();
 
+  void _onDaySelected(DateTime day, DateTime focusedDay) {
+    setState(() {
+      today = day;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +32,17 @@ class _CalendarScreenState extends State<CalendarScreen> {
         children: [
           Container(
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(20.0),
               child: TableCalendar(
-                  headerStyle: HeaderStyle(
-                      formatButtonVisible: false, titleCentered: true),
-                  availableGestures: AvailableGestures.all,
-                  focusedDay: today,
-                  firstDay: DateTime.utc(2024, 01, 01),
-                  lastDay: DateTime.utc(2030, 12, 30)),
+                headerStyle: HeaderStyle(
+                    formatButtonVisible: false, titleCentered: true),
+                availableGestures: AvailableGestures.all,
+                selectedDayPredicate: (day) => isSameDay(day, today),
+                focusedDay: today,
+                firstDay: DateTime.utc(2024, 01, 01),
+                lastDay: DateTime.utc(2030, 12, 30),
+                onDaySelected: _onDaySelected,
+              ),
             ),
           )
         ],

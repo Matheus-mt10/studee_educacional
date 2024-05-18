@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/screens/calendar_screen.dart';
 import 'package:studee_educational/screens/classes_screen.dart';
+import 'package:studee_educational/screens/configuration_screen.dart';
 import 'package:studee_educational/screens/forgotpassword_screen.dart';
 import 'package:studee_educational/screens/homescreen.dart';
 import 'package:studee_educational/screens/login_screen.dart';
@@ -62,7 +63,8 @@ final _router = GoRouter(routes: [
   GoRoute(
     path: '/calendario',
     builder: (context, state) => CalendarScreen(),
-  )
+  ),
+  GoRoute(path: '/configuracoes', builder: (context, state) => ConfigurationScreen(),)
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {
