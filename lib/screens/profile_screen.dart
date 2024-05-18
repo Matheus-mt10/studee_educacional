@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   Icon(FontAwesomeIcons.a),
                   Text(
-                    "Membro Gold",0 
+                    "Membro Gold",
                     style: TextStyle(fontSize: 20, color: Colors.purple),
                   ),
                 ],
