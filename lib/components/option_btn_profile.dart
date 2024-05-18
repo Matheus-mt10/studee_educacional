@@ -44,14 +44,14 @@ class _OptionBtnProfileState extends State<OptionBtnProfile> {
           padding: const EdgeInsets.only(left: 20.0),
           child: Text(
             widget.optionText,
-            style: const TextStyle(fontSize: 20), 
+            style: const TextStyle(fontSize: 20),
           ),
         ),
         Padding(
             padding: const EdgeInsets.only(right: 30.0),
             child: IconButton(
                 onPressed: () {
-                  context.push('');
+                  context.push(widget.location);
                 },
                 icon: const Icon(FontAwesomeIcons.chevronRight)))
       ],
