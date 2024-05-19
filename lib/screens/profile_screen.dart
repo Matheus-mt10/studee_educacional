@@ -89,27 +89,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
         Divider(),
-        ListTile(
-          leading: Icon(FontAwesomeIcons.solidMoon),
-          title: Text("Dark Mode",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
-        ),
-        FlutterSwitch(
-            value: status,
-            width: 100,
-            activeColor: Colors.indigo,
-            inactiveColor: Colors.grey,
-            toggleColor: Colors.white,
-            toggleSize: 20,
-            borderRadius: 20,
-            padding: 5,
-            showOnOff: false,
-            height: 50,
-            onToggle: (val) {
-              setState(() {
-                status = val;
-              });
-            }),
+        Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Container(
+            // color: const Color.fromARGB(196, 158, 158, 158),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(FontAwesomeIcons.solidMoon),
+                Padding(
+                  padding: const EdgeInsets.only(right: 180.0),
+                  child: Text(
+                    "Dark Mode",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                FlutterSwitch(
+                    value: status,
+                    width: 60,
+                    height: 30,
+                    toggleSize: 20,
+                    borderRadius: 14,
+                    activeColor: Colors.indigo,
+                    inactiveColor: Colors.grey,
+                    showOnOff: false,
+                    onToggle: (val) {
+                      setState(() {
+                        status = val;
+                      });
+                    })
+              ],
+            ),
+          ),
+        )
       ]),
     );
   }
