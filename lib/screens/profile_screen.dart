@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:studee_educational/components/profile_row_options.dart';
 
 class ProfileScreen extends StatefulWidget {
   ProfileScreen({super.key});
@@ -72,6 +73,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ),
+        SizedBox(
+          height: 6,
+        ),
         Padding(
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: Row(
@@ -88,6 +92,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ),
+        SizedBox(
+          height: 10,
+        ),
         Divider(),
         Padding(
           padding: const EdgeInsets.all(14.0),
@@ -97,7 +104,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(FontAwesomeIcons.solidMoon),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, right: 10),
+                  child: Icon(FontAwesomeIcons.solidMoon),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(right: 180.0),
                   child: Text(
@@ -122,7 +132,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
-        )
+        ),
+        Divider(),
+        // Divisão segunda linha
+        ProfileRowOptions(
+            icon: FontAwesomeIcons.key,
+            title: 'Conta',
+            btn: FontAwesomeIcons.chevronRight,
+            pRigth: 230,
+            pRightBtn: 15,
+            onTap: () {}),
+        Divider(),
+        ProfileRowOptions(
+            icon: FontAwesomeIcons.lock,
+            title: 'Privacidade',
+            btn: FontAwesomeIcons.chevronRight,
+            pRigth: 174,
+            pRightBtn: 15,
+            onTap: () {}),
+        Divider(),
+        ProfileRowOptions(
+            icon: FontAwesomeIcons.heart,
+            title: 'Convide um amigo',
+            btn: FontAwesomeIcons.chevronRight,
+            pRigth: 110,
+            pRightBtn: 15,
+            onTap: () {}),
+        Divider(),
+        ProfileRowOptions(
+            icon: FontAwesomeIcons.circleQuestion,
+            title: "Ajuda",
+            btn: FontAwesomeIcons.chevronRight,
+            pRigth: 230,
+            pRightBtn: 15,
+            onTap: () {})
       ]),
     );
   }

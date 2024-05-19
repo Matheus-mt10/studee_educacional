@@ -1,5 +1,6 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/screens/calendar_screen.dart';
 import 'package:studee_educational/screens/classes_screen.dart';
@@ -20,6 +21,10 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await Future.delayed(const Duration(seconds: 10));
+  FlutterNativeSplash.remove();
+
   runApp(const MyApp());
 }
 
@@ -50,7 +55,7 @@ final _router = GoRouter(routes: [
   ),
   GoRoute(
     path: '/profile',
-    builder: (context, state) =>  ProfileScreen(),
+    builder: (context, state) => ProfileScreen(),
   ),
   GoRoute(
     path: '/notificacoes',
@@ -64,7 +69,10 @@ final _router = GoRouter(routes: [
     path: '/calendario',
     builder: (context, state) => CalendarScreen(),
   ),
-  GoRoute(path: '/configuracoes', builder: (context, state) => ConfigurationScreen(),)
+  GoRoute(
+    path: '/configuracoes',
+    builder: (context, state) => ConfigurationScreen(),
+  )
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {

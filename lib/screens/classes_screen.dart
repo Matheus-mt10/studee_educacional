@@ -110,9 +110,17 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ClassesBtn(
-                      image: 'images/business.png', titleCard: 'Business'),
+                    image: 'images/business.png',
+                    titleCard: 'Business',
+                    onTap: (){
+                      context.push('/homePage');
+                    };
+                  ),
                   ClassesBtn(
-                      image: 'images/marketing.png', titleCard: 'Marketing'),
+                    image: 'images/marketing.png',
+                    titleCard: 'Marketing',
+                    onTap: "",
+                  ),
                 ],
               ),
               SizedBox(
@@ -122,10 +130,16 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ClassesBtn(image: 'images/design.png', titleCard: "Design"),
                   ClassesBtn(
-                      image: 'images/programming.png',
-                      titleCard: 'Programação'),
+                    image: 'images/design.png',
+                    titleCard: "Design",
+                    onTap: "",
+                  ),
+                  ClassesBtn(
+                    image: 'images/programming.png',
+                    titleCard: 'Programação',
+                    onTap: "",
+                  ),
                 ],
               ),
               SizedBox(
