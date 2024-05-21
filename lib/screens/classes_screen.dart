@@ -109,13 +109,7 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ClassesBtn(
-                    image: 'images/business.png',
-                    titleCard: 'Business',
-                    onTap: (){
-                      context.push('/homePage');
-                    };
-                  ),
+                  ClassesBtn(image: "images/business.png", titleCard: "Business", o)
                   ClassesBtn(
                     image: 'images/marketing.png',
                     titleCard: 'Marketing',
@@ -133,12 +127,12 @@ class _ClassesScreenState extends State<ClassesScreen> {
                   ClassesBtn(
                     image: 'images/design.png',
                     titleCard: "Design",
-                    onTap: "",
+                    onTap: null,
                   ),
                   ClassesBtn(
                     image: 'images/programming.png',
                     titleCard: 'Programação',
-                    onTap: "",
+                    onTap: null,
                   ),
                 ],
               ),

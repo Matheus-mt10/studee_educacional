@@ -1,18 +1,17 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ClassesBtn extends StatefulWidget {
-  ClassesBtn(
-      {super.key,
-      required this.image,
-      required this.titleCard,
-      });
+  ClassesBtn({
+    super.key,
+    required this.image,
+    required this.titleCard,
+    this._onTap
+  });
 
   final String image;
   final String titleCard;
-
+  final VoidCallback _onTap;
 
   @override
   State<ClassesBtn> createState() => _ClassesBtnState();
@@ -22,7 +21,9 @@ class _ClassesBtnState extends State<ClassesBtn> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ,
+      onTap: (){
+        widget._onTap;
+      } ,
       child: Container(
         width: 180,
         height: 70,
