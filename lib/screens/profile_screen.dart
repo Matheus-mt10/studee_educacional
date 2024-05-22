@@ -141,7 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             btn: FontAwesomeIcons.chevronRight,
             pRigth: 230,
             pRightBtn: 15,
-            onTap: () {}),
+            ),
         Divider(),
         ProfileRowOptions(
             icon: FontAwesomeIcons.lock,
@@ -149,7 +149,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             btn: FontAwesomeIcons.chevronRight,
             pRigth: 174,
             pRightBtn: 15,
-            onTap: () {}),
+            ),
         Divider(),
         ProfileRowOptions(
             icon: FontAwesomeIcons.heart,
@@ -157,7 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             btn: FontAwesomeIcons.chevronRight,
             pRigth: 110,
             pRightBtn: 15,
-            onTap: () {}),
+            ),
         Divider(),
         ProfileRowOptions(
             icon: FontAwesomeIcons.circleQuestion,
@@ -165,7 +165,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             btn: FontAwesomeIcons.chevronRight,
             pRigth: 230,
             pRightBtn: 15,
-            onTap: () {})
+           )
       ]),
     );
   }

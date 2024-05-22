@@ -10,14 +10,14 @@ class ProfileRowOptions extends StatefulWidget {
       required this.btn,
       required this.pRigth,
       required this.pRightBtn,
-      required this._onTap});
+      });
 
   final IconData icon;
   final String title;
   final IconData btn;
   final double pRigth;
   final double pRightBtn;
-  final VoidCallback _onTap;
+  
 
   @override
   State<ProfileRowOptions> createState() => _ProfileRowOptionsState();
@@ -47,7 +47,7 @@ class _ProfileRowOptionsState extends State<ProfileRowOptions> {
             ),
             InkWell(
               onTap: () {
-                widget._onTap;
+              
               },
               child: Padding(
                 padding:  EdgeInsets.only(right: widget.pRightBtn),

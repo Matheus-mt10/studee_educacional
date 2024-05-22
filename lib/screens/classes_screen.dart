@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:studee_educational/components/Classes_btn.dart';
 import 'package:studee_educational/components/card_popular_courses.dart';
 import 'package:studee_educational/models/mocks/popular_courses_dto.dart';
 
@@ -40,10 +39,6 @@ class _ClassesScreenState extends State<ClassesScreen> {
             color: Colors.white,
           ),
         ),
-        // title: Text(
-        //   "Aulas",
-        //   style: TextStyle(color: Colors.white),
-        // ),
         centerTitle: true,
         actions: [
           Icon(
@@ -109,11 +104,73 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ClassesBtn(image: "images/business.png", titleCard: "Business", o)
-                  ClassesBtn(
-                    image: 'images/marketing.png',
-                    titleCard: 'Marketing',
-                    onTap: "",
+                  InkWell(
+                    onTap: () {
+                      context.push('/business');
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              height: 40,
+                              width: 40,
+                              child: Image.asset('images/business.png')),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 14.0),
+                            child: Text(
+                              "Business",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 180,
+                      height: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              height: 40,
+                              width: 40,
+                              child: Image.asset('images/business.png')),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 14.0),
+                            child: Text(
+                              "Business",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -124,15 +181,71 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ClassesBtn(
-                    image: 'images/design.png',
-                    titleCard: "Design",
-                    onTap: null,
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 180,
+                      height: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              height: 40,
+                              width: 40,
+                              child: Image.asset('images/business.png')),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 14.0),
+                            child: Text(
+                              "Business",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  ClassesBtn(
-                    image: 'images/programming.png',
-                    titleCard: 'Programação',
-                    onTap: null,
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 180,
+                      height: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              height: 40,
+                              width: 40,
+                              child: Image.asset('images/business.png')),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 14.0),
+                            child: Text(
+                              "Business",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
