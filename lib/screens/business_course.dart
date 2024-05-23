@@ -11,14 +11,14 @@ class BusinessCourse extends StatefulWidget {
 class _BusinessCourseState extends State<BusinessCourse> {
   final videoUrl = "https://www.youtube.com/watch?v=6RFu-SYt-L8";
 
-  late YoutubePlayerController controller;
+  late YoutubePlayerController _controller;
 
   @override
   void initState() {
     super.initState();
     final videoID = YoutubePlayer.convertUrlToId(videoUrl);
 
-    controller = YoutubePlayerController(
+    _controller = YoutubePlayerController(
         initialVideoId: videoID!,
         flags: const YoutubePlayerFlags(autoPlay: false));
   }
@@ -41,7 +41,7 @@ class _BusinessCourseState extends State<BusinessCourse> {
           children: [
             Text("data"),
             YoutubePlayer(
-              controller: controller,
+              controller: _controller,
               showVideoProgressIndicator: true,
             )
           ],
