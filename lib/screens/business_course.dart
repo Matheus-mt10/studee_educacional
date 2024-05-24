@@ -17,7 +17,6 @@ class _BusinessCourseState extends State<BusinessCourse> {
   void initState() {
     super.initState();
     final videoID = YoutubePlayer.convertUrlToId(videoUrl);
-
     _controller = YoutubePlayerController(
         initialVideoId: videoID!,
         flags: const YoutubePlayerFlags(autoPlay: false));
