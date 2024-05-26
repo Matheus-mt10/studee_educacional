@@ -96,6 +96,7 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
                             fontWeight: FontWeight.w600),
                       ),
                       ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: _configContent.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -120,6 +121,7 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
                             fontWeight: FontWeight.w600),
                       ),
                       ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: _configPreffer.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -144,6 +146,7 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
                             fontWeight: FontWeight.w600),
                       ),
                       ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: _configAcess.length,
                         itemBuilder: (BuildContext context, int index) {

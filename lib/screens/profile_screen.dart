@@ -17,7 +17,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
-        SizedBox(height: 50),
+        SizedBox(height: 70),
         Container(
           child: Center(
             child: Column(children: [
@@ -136,36 +136,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Divider(),
         // Divisão segunda linha
         ProfileRowOptions(
-            icon: FontAwesomeIcons.key,
-            title: 'Conta',
-            btn: FontAwesomeIcons.chevronRight,
-            pRigth: 230,
-            pRightBtn: 15,
-            ),
+          icon: FontAwesomeIcons.key,
+          title: 'Conta',
+          btn: FontAwesomeIcons.chevronRight,
+          pRigth: 230,
+          pRightBtn: 15,
+        ),
         Divider(),
         ProfileRowOptions(
-            icon: FontAwesomeIcons.lock,
-            title: 'Privacidade',
-            btn: FontAwesomeIcons.chevronRight,
-            pRigth: 174,
-            pRightBtn: 15,
-            ),
+          icon: FontAwesomeIcons.lock,
+          title: 'Privacidade',
+          btn: FontAwesomeIcons.chevronRight,
+          pRigth: 174,
+          pRightBtn: 15,
+        ),
         Divider(),
         ProfileRowOptions(
-            icon: FontAwesomeIcons.heart,
-            title: 'Convide um amigo',
-            btn: FontAwesomeIcons.chevronRight,
-            pRigth: 110,
-            pRightBtn: 15,
-            ),
+          icon: FontAwesomeIcons.heart,
+          title: 'Convide um amigo',
+          btn: FontAwesomeIcons.chevronRight,
+          pRigth: 110,
+          pRightBtn: 15,
+        ),
         Divider(),
         ProfileRowOptions(
-            icon: FontAwesomeIcons.circleQuestion,
-            title: "Ajuda",
-            btn: FontAwesomeIcons.chevronRight,
-            pRigth: 230,
-            pRightBtn: 15,
-           )
+          icon: FontAwesomeIcons.circleQuestion,
+          title: "Ajuda",
+          btn: FontAwesomeIcons.chevronRight,
+          pRigth: 230,
+          pRightBtn: 15,
+        )
       ]),
     );
   }
