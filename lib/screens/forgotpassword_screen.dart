@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:go_router/go_router.dart';
 import 'package:studee_educational/components/basescaffold_screen.dart';
-
+import 'package:studee_educational/components/input.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -15,38 +14,32 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
-      showAppBar: false,
-      showBottomBar: false,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 25.0),
-              child: Text(
-                'Preencha os dados abaixo para solicitar a recuperação de senha',
-                style: TextStyle(fontSize: 24),
+        showAppBar: false,
+        showBottomBar: false,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "Esqueceu a senha?",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
               ),
-            ),
-            // Input(label: "Email", icon: Icon(FontAwesomeIcons.mailchimp), textIntenal: "Digite seu email"),
-            SizedBox(
-                width: 150,
-                height: 50,
-                child: FilledButton(
-                    onPressed: () {}, child: const Text("Enviar"))),
-            const Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text(
-                  'Você irá receber um e-mail no endereço informado acima contendo o procedimento para criar uma nova senha'),
-            ),
-            FilledButton(
-                onPressed: () {
-                  context.push('/');
-                },
-                child: const Text('Voltar'))
-          ],
-        ),
-      ),
-    );
+              SizedBox(
+                height: 18,
+              ),
+              Text(
+                "Entre com o seu email, para que possamos enviar as instruções para redefinir a senha.",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Input(label: 'Email', internalText: 'Digite o seu Email'),
+              FilledButton(onPressed: () {}, child: Text("Continuar"))
+            ],
+          ),
+        ));
   }
 }
