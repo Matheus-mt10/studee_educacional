@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:studee_educational/models/mocks/business_course_video_dto.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class BusinessCourse extends StatefulWidget {
@@ -9,9 +10,18 @@ class BusinessCourse extends StatefulWidget {
 }
 
 class _BusinessCourseState extends State<BusinessCourse> {
-  final videoUrl = "https://www.youtube.com/watch?v=6RFu-SYt-L8";
+   final videoUrl = "https://www.youtube.com/watch?v=6RFu-SYt-L8";
 
   late YoutubePlayerController _controller;
+
+  final List<BusinessCourseVideoDto> _businessCourse = [
+    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+  ];
+
+  
 
   @override
   void initState() {
@@ -38,7 +48,13 @@ class _BusinessCourseState extends State<BusinessCourse> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("data"),
+            Text(
+              "Aula 1 - Introdução a business",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              height: 16,
+            ),
             YoutubePlayer(
               controller: _controller,
               showVideoProgressIndicator: true,
