@@ -2,6 +2,7 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
+import 'package:studee_educational/screens/business_classes_screen.dart';
 import 'package:studee_educational/screens/business_course.dart';
 import 'package:studee_educational/screens/calendar_screen.dart';
 import 'package:studee_educational/screens/classes_screen.dart';
@@ -77,7 +78,8 @@ final _router = GoRouter(routes: [
   GoRoute(
     path: '/business',
     builder: (context, state) => BusinessCourse(),
-  )
+  ),
+  GoRoute(path: '/businessClasses', builder: (context, state) => BusinessClassesScreen(),)
 ], initialLocation: '/');
 
 class MyApp extends StatelessWidget {

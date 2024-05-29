@@ -106,7 +106,7 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 children: [
                   InkWell(
                     onTap: () {
-                      context.push('/business');
+                      context.push('/businessClasses');
                     },
                     child: Container(
                       width: 180,
