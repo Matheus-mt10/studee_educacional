@@ -260,6 +260,7 @@ class _ClassesScreenState extends State<ClassesScreen> {
                 height: 16,
               ),
               ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: _popularCoursesList.length,
                 itemBuilder: (BuildContext context, int index) {
