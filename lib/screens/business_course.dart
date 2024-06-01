@@ -10,18 +10,20 @@ class BusinessCourse extends StatefulWidget {
 }
 
 class _BusinessCourseState extends State<BusinessCourse> {
-   final videoUrl = "https://www.youtube.com/watch?v=6RFu-SYt-L8";
+  final videoUrl = "https://www.youtube.com/watch?v=6RFu-SYt-L8";
 
   late YoutubePlayerController _controller;
 
   final List<BusinessCourseVideoDto> _businessCourse = [
-    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
-    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
-    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
-    BusinessCourseVideoDto(urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(
+        urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(
+        urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(
+        urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
+    BusinessCourseVideoDto(
+        urlVideo: "https://www.youtube.com/watch?v=jbW4f60dCNA"),
   ];
-
-  
 
   @override
   void initState() {
@@ -58,7 +60,14 @@ class _BusinessCourseState extends State<BusinessCourse> {
             YoutubePlayer(
               controller: _controller,
               showVideoProgressIndicator: true,
-            )
+            ),
+            Text(
+              "Matheus",
+              style: TextStyle(fontSize: 50),
+            ),
+            Container(
+              child: Image.asset('images/jobs.jpeg'),
+            ),
           ],
         ),
       ),
