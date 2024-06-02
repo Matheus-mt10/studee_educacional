@@ -61,12 +61,12 @@ class _BusinessCourseState extends State<BusinessCourse> {
               controller: _controller,
               showVideoProgressIndicator: true,
             ),
-            Text(
-              "Matheus",
-              style: TextStyle(fontSize: 50),
+            SizedBox(
+              height: 50,
             ),
-            Container(
-              child: Image.asset('images/jobs.jpeg'),
+            Text(
+              'Matheus',
+              style: TextStyle(fontSize: 24, color: Colors.blue),
             ),
           ],
         ),
